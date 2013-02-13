@@ -34,13 +34,23 @@ var MostLiked = window.Hub.MostLiked = function MostLiked (opts) {
                 author = authors[content.authorId];
             
             content.author = author;
+            var formattedDate = formatDate(new Date(content.createdAt));
 			$comments.append($(
-				MostLiked.commentTemplate
+				self.commentTemplate
+                    .replace('{{ author.avatarUrl }}', content.author.avatar)
+                    .replace('{{ author.id }}', content.author.id)
+                    .replace('{{ author.userId }}', (content.author.id && content.author.id.split('@')[0]) )
+                    .replace('{{ createdAt }}', formattedDate)
+                    .replace('{{ id }}', content.id)
                     .replace('{{ author.displayName }}', content.author.displayName)
 					.replace('{{ bodyHtml }}', content.bodyHtml)
                     .replace('{{ likeCount }}', content.annotations.likes)
 			));
 		});
+
+        function formatDate (d) {
+            debugger;
+        }
 	});
 
 	return this;

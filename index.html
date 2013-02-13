@@ -42,7 +42,13 @@
 			el: document.getElementById('MostLikedComments'),
 			network: 'techcrunch.fyre.co',
 			siteId: 311145,
-			articleId: '756310'
+			articleId: '756310',
+			commentTemplate: '\
+<article data-hub-content-id="">\
+<img class="hub-avatar" src="{{ author.avatarUrl }}" />\
+<p class="hub-byline">{{ author.displayName }} - {{ likeCount }}</p>\
+<div class="hub-content-body">{{ bodyHtml }}</div>\
+</article>'
 		}).render();
 		</script>
 	</div>
