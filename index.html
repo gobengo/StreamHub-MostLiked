@@ -12,8 +12,10 @@
 			color: green;
 		}
 		.hub-MostLiked .hub-byline {
-			font-weight: bold;
 			margin: 0;
+		}
+		.hub-MostLiked .hub-author {
+			font-weight: bold;
 		}
 		.hub-MostLiked article {
 			display: table;
@@ -26,10 +28,16 @@
 			display: table-cell;
 			vertical-align: top;
 		}
-
+		.hub-MostLiked .hub-content {
+			width: 100%;
+		}
 		.hub-MostLiked .hub-content-body p {
 			margin-top: 0;
 			margin-bottom: 1em;
+		}
+
+		.hub-MostLiked .hub-timestamp {
+			float: right;
 		}
 
 
@@ -49,7 +57,15 @@
 			el: document.getElementById('MostLikedComment'),
 			network: 'techcrunch.fyre.co',
 			siteId: 311145,
-			articleId: '756310'
+			articleId: '756310',
+			commentTemplate: '\
+<article data-hub-content-id="">\
+<img class="hub-avatar" src="{{ author.avatarUrl }}" />\
+<div class="hub-content">\
+	<p class="hub-byline"><span class="hub-author" data-hub-user-id="{{ author.userId }}">{{ author.displayName }}</span> - <span class="hub-like-count">{{ likeCount }} {{ likeWord }}</span><span class="hub-timestamp">{{ createdAt }}</span></p>\
+	<div class="hub-content-body">{{ bodyHtml }}</div>\
+</div>\
+</article>'
 		}).render();
 		</script>
 
@@ -61,12 +77,12 @@
 			el: document.getElementById('MostLikedComments'),
 			network: 'techcrunch.fyre.co',
 			siteId: 311145,
-			articleId: '756310',
+			articleId: '757341',
 			commentTemplate: '\
 <article data-hub-content-id="">\
 <img class="hub-avatar" src="{{ author.avatarUrl }}" />\
 <div class="hub-content">\
-	<p class="hub-byline"><span class="hub-author" data-hub-user-id="{{ author.userId }}">{{ author.displayName }}</span> - {{ likeCount }} likes</p>\
+	<p class="hub-byline"><span class="hub-author" data-hub-user-id="{{ author.userId }}">{{ author.displayName }}</span> - <span class="hub-like-count">{{ likeCount }} {{ likeWord }}</span><span class="hub-timestamp">{{ createdAt }}</span></p>\
 	<div class="hub-content-body">{{ bodyHtml }}</div>\
 </div>\
 </article>'
