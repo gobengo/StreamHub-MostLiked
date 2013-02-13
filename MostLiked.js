@@ -49,7 +49,6 @@ var MostLiked = window.Hub.MostLiked = function MostLiked (opts) {
 		});
 
         function formatDate (d) {
-            debugger;
         }
 	});
 
