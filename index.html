@@ -3,41 +3,20 @@
 	<head>
 		<style>
 		#container {
+			font-family: sans-serif;
+			font-size: 14px;
 			width: 600px;
 			margin: 0 auto;
+		}
+		.hub-avatar {
+			width: 32px;
+			height: 32px;
+			border-radius: 3px;
 		}
 		h1,
 		.hub-MostLiked a,
 		.hub-MostLiked .hub-byline {
 			color: green;
-		}
-
-		.hub-MostLiked .hub-byline {
-			margin: 0;
-		}
-		.hub-MostLiked .hub-author {
-			font-weight: bold;
-		}
-		.hub-MostLiked article {
-			display: table;
-		}
-		.hub-MostLiked img.hub-avatar {
-			margin-right: 10px;
-		}
-		.hub-MostLiked img.hub-avatar,
-		.hub-MostLiked .hub-content {
-			display: table-cell;
-			vertical-align: top;
-		}
-		.hub-MostLiked .hub-content {
-			width: 100%;
-		}
-		.hub-MostLiked .hub-content-body p {
-			margin-top: 0;
-			margin-bottom: 1em;
-		}
-		.hub-MostLiked .hub-timestamp {
-			float: right;
 		}
 		</style>
 	</head>
@@ -49,8 +28,10 @@
 
 		<!-- Scripts -->
 		<script src="lib/jquery/jquery.js"></script>
+		<!-- MostLiked js/css -->
 		<script src="main.js"></script>
-		
+		<link rel="stylesheet" href="main.css" />
+
 		<script>
 		// Most Liked Comments init
 		var MostLikedComments = new Hub.MostLiked({

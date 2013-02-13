@@ -1,0 +1,27 @@
+.hub-MostLiked .hub-byline {
+	margin: 0;
+}
+.hub-MostLiked .hub-author {
+	font-weight: bold;
+}
+.hub-MostLiked article {
+	display: table;
+}
+.hub-MostLiked img.hub-avatar {
+	margin-right: 10px;
+}
+.hub-MostLiked img.hub-avatar,
+.hub-MostLiked .hub-content {
+	display: table-cell;
+	vertical-align: top;
+}
+.hub-MostLiked .hub-content {
+	width: 100%;
+}
+.hub-MostLiked .hub-content-body p {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+.hub-MostLiked .hub-timestamp {
+	float: right;
+}
