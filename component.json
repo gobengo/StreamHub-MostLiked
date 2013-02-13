@@ -1,0 +1,10 @@
+{
+  "name": "StreamHub-MostLiked",
+  "version": "0.0.0",
+  "main": [
+    "./main.js"
+  ],
+  "dependencies": {
+    "jquery": ">1.8"
+  }
+}

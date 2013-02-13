@@ -11,6 +11,7 @@
 		.hub-MostLiked .hub-byline {
 			color: green;
 		}
+
 		.hub-MostLiked .hub-byline {
 			margin: 0;
 		}
@@ -35,45 +36,25 @@
 			margin-top: 0;
 			margin-bottom: 1em;
 		}
-
 		.hub-MostLiked .hub-timestamp {
 			float: right;
 		}
-
-
 		</style>
 	</head>
 	<body>
 	<div id="container">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="MostLiked.js"></script>
-
-		<!-- Most Liked Comment -->
-		<h1>Most Liked Comment</h1>
-		<div id="MostLikedComment"></div>
-		<script>
-		var MostLikedComment = new Hub.MostLiked({
-			count: 1,
-			el: document.getElementById('MostLikedComment'),
-			network: 'techcrunch.fyre.co',
-			siteId: 311145,
-			articleId: '757341',
-			commentTemplate: '\
-<article data-hub-content-id="">\
-<img class="hub-avatar" src="{{ author.avatarUrl }}" />\
-<div class="hub-content">\
-	<p class="hub-byline"><span class="hub-author" data-hub-user-id="{{ author.userId }}">{{ author.displayName }}</span> - <span class="hub-like-count">{{ likeCount }} {{ likeWord }}</span><span class="hub-timestamp">{{ createdAt }}</span></p>\
-	<div class="hub-content-body">{{ bodyHtml }}</div>\
-</div>\
-</article>'
-		}).render();
-		</script>
-
 		<!-- Most Liked Comments -->
 		<h1>Most Liked Comments</h1>
 		<div id="MostLikedComments"></div>
+
+		<!-- Scripts -->
+		<script src="lib/jquery/jquery.js"></script>
+		<script src="main.js"></script>
+		
 		<script>
+		// Most Liked Comments init
 		var MostLikedComments = new Hub.MostLiked({
+			count: 5,
 			el: document.getElementById('MostLikedComments'),
 			network: 'techcrunch.fyre.co',
 			siteId: 311145,
