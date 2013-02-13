@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+		#container {
+			width: 600px;
+			margin: 0 auto;
+		}
+		h1,
+		.hub-MostLiked a,
+		.hub-MostLiked .hub-byline {
+			color: green;
+		}
+		.hub-MostLiked .hub-byline {
+			font-weight: bold;
+		}
+		</style>
+	</head>
+	<body>
+	<div id="container">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="MostLiked.js"></script>
+
+		<!-- Most Liked Comment -->
+		<h1>Most Liked Comment</h1>
+		<div id="MostLikedComment"></div>
+		<script>
+		var MostLikedComment = new Hub.MostLiked({
+			count: 1,
+			el: document.getElementById('MostLikedComment'),
+			network: 'techcrunch.fyre.co',
+			siteId: 311145,
+			articleId: '756310'
+		}).render();
+		</script>
+
+		<!-- Most Liked Comments -->
+		<h1>Most Liked Comments</h1>
+		<div id="MostLikedComments"></div>
+		<script>
+		var MostLikedComments = new Hub.MostLiked({
+			el: document.getElementById('MostLikedComments'),
+			network: 'techcrunch.fyre.co',
+			siteId: 311145,
+			articleId: '756310'
+		}).render();
+		</script>
+	</div>
+	</body>
+</html>
