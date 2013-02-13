@@ -13,7 +13,26 @@
 		}
 		.hub-MostLiked .hub-byline {
 			font-weight: bold;
+			margin: 0;
 		}
+		.hub-MostLiked article {
+			display: table;
+		}
+		.hub-MostLiked img.hub-avatar {
+			margin-right: 10px;
+		}
+		.hub-MostLiked img.hub-avatar,
+		.hub-MostLiked .hub-content {
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		.hub-MostLiked .hub-content-body p {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+
+
 		</style>
 	</head>
 	<body>
@@ -46,8 +65,10 @@
 			commentTemplate: '\
 <article data-hub-content-id="">\
 <img class="hub-avatar" src="{{ author.avatarUrl }}" />\
-<p class="hub-byline">{{ author.displayName }} - {{ likeCount }}</p>\
-<div class="hub-content-body">{{ bodyHtml }}</div>\
+<div class="hub-content">\
+	<p class="hub-byline"><span class="hub-author" data-hub-user-id="{{ author.userId }}">{{ author.displayName }}</span> - {{ likeCount }} likes</p>\
+	<div class="hub-content-body">{{ bodyHtml }}</div>\
+</div>\
 </article>'
 		}).render();
 		</script>
